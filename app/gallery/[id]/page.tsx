@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import { variables } from '@/app/variables';
 import { stringifyWithSpaces, underscoreToSpace } from '@/lib/utils';
 
-const examplesPath = './examples';
+const examplesPath = './public/examples';
 
 // Get example //
 async function getExampleContent(id: string, type: 'input' | 'output') {

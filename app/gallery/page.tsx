@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { underscoreToSpace } from '@/lib/utils';
 
-const examplesPath = './examples';
+const examplesPath = './public/examples';
 
 // Get files from examples folder, only *.input.json, and remove endings //
 // Possible filenames - [a-zA-Z0-9\-_] //
