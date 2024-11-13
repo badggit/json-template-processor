@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import { variables } from '@/app/variables';
 import { stringifyWithSpaces, underscoreToSpace } from '@/lib/utils';
 
-const examplesPath = './public/examples';
+const examplesPath = path.join(process.cwd(), 'data/examples');
 
 // Get example //
 async function getExampleContent(id: string, type: 'input' | 'output') {
@@ -41,35 +41,38 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   return (
     <>
       <h1>JSON Gallery</h1>
-      <h2>{underscoreToSpace(id)}</h2>
 
       {inputContent ? (
-        <div>
-          <div className="mt-6">
-            <h2 className="mb-2 text-lg font-semibold">Template:</h2>
-            {inputContent ? (
-              <textarea rows={20} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(inputContent)} />
-            ) : (
-              <Error />
-            )}
+        <>
+          {' '}
+          <h2>{underscoreToSpace(id)}</h2>
+          <div>
+            <div className="mt-6">
+              <h2 className="mb-2 text-lg font-semibold">Template:</h2>
+              {inputContent ? (
+                <textarea rows={20} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(inputContent)} />
+              ) : (
+                <Error />
+              )}
+            </div>
+            <div className="mt-6">
+              <h2 className="mb-2 text-lg font-semibold">Variables:</h2>
+              {variables ? (
+                <textarea rows={15} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(variables)} />
+              ) : (
+                <Error />
+              )}
+            </div>
+            <div className="mt-6">
+              <h2 className="mb-2 text-lg font-semibold">Output:</h2>
+              {outputContent ? (
+                <textarea rows={20} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(outputContent)} />
+              ) : (
+                <Error />
+              )}
+            </div>
           </div>
-          <div className="mt-6">
-            <h2 className="mb-2 text-lg font-semibold">Variables:</h2>
-            {variables ? (
-              <textarea rows={15} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(variables)} />
-            ) : (
-              <Error />
-            )}
-          </div>
-          <div className="mt-6">
-            <h2 className="mb-2 text-lg font-semibold">Output:</h2>
-            {outputContent ? (
-              <textarea rows={20} className="textarea overflow-x-auto bg-gray-100" defaultValue={stringifyWithSpaces(outputContent)} />
-            ) : (
-              <Error />
-            )}
-          </div>
-        </div>
+        </>
       ) : (
         <Error />
       )}

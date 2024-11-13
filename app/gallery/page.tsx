@@ -1,10 +1,11 @@
 import fs from 'fs/promises';
+import path from 'path';
 
 import Link from 'next/link';
 
 import { underscoreToSpace } from '@/lib/utils';
 
-const examplesPath = './public/examples';
+const examplesPath = path.join(process.cwd(), 'data/examples');
 
 // Get files from examples folder, only *.input.json, and remove endings //
 // Possible filenames - [a-zA-Z0-9\-_] //
