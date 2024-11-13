@@ -43,7 +43,7 @@ const templates = [
       '          "collection": "staffList",\n' +
       '          "produce": {\n' +
       '            "name": "{{name}}",\n' +
-      '            "email": "{{username}}@raxalle.com"\n' +
+      '            "email": "{{username}}@google.com"\n' +
       '          }\n' +
       '        }\n' +
       '      }\n' +
@@ -98,7 +98,7 @@ const templates = [
       '    {\n' +
       '      "type": "text",\n' +
       '      "title": "Introduction",\n' +
-      '      "content": "Welcome to the induction form for Raxalle. Please fill out the following information so that we can get to know you better."\n' +
+      '      "content": "Welcome to the induction form for Google. Please fill out the following information so that we can get to know you better."\n' +
       '    },\n' +
       '    {\n' +
       '      "type": "staff",\n' +
@@ -107,7 +107,7 @@ const templates = [
       '          "collection": "staffList",\n' +
       '          "produce": {\n' +
       '            "name": "{{name}}",\n' +
-      '            "email": "{{username}}@raxalle.com"\n' +
+      '            "email": "{{username}}@google.com"\n' +
       '          }\n' +
       '        }\n' +
       '      }\n' +

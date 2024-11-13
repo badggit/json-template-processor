@@ -1,5 +1,3 @@
-## JSON Templates Processor
-
 Done - Task 1: Fix the most important JSON template processor problems
 Done - Task 2: Make JSON processor UI better
 Done - Task 3: Implement the JSON gallery
@@ -20,7 +18,7 @@ Changes I would make:
 5. Probably enable auto-sizing for text areas.
 6. Add JSON format button for text area
 
-More tests in test.png
+More tests in tests.png
 
 ### If template example
 Template: ``` {"data": {"$if": "{{showData}}", "value": "secret"}} ```

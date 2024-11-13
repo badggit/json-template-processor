@@ -6,8 +6,9 @@ import Breadcrumb from '@/lib/components/Breadcrumb';
 
 const inter = Inter({ subsets: ['latin'] });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const metadata: Metadata = {
-  title: 'JSON Template Processor',
+  title: 'JSON Template Creator',
   description: 'Create template files',
 };
 

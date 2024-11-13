@@ -3,9 +3,10 @@ import path from 'path';
 
 import Link from 'next/link';
 
+import { notFound } from 'next/navigation';
+
 import { variables } from '@/app/variables';
 import { stringifyWithSpaces, underscoreToSpace } from '@/lib/utils';
-import { notFound } from 'next/navigation';
 
 const examplesPath = './examples';
 
@@ -20,11 +21,12 @@ async function getExampleContent(id: string, type: 'input' | 'output') {
     const content = await fs.readFile(path.join(examplesPath, `${id}.${type === 'input' ? 'input' : 'output'}.json`), 'utf-8');
     return JSON.parse(content);
   } catch (error) {
+    console.error('getExampleContent error:', error);
     return null;
   }
 }
 
-export default async function Page({ params }: { params: { id?: string } }) {
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   if (!id) {
     return notFound();
