@@ -1,0 +1,25 @@
+{
+  "company": "{{companyName}}",
+  "departments": {
+    "$for": {
+      "collection": "depts",
+      "produce": {
+        "name": "{{name}}",
+        "manager": "{{manager}}",
+        "employees": {
+          "$for": {
+            "collection": "employees",
+            "produce": {
+              "name": "{{name}}",
+              "position": "{{position}}",
+              "isFullTime": {
+                "$if": "{{fullTime}}",
+                "value": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Induction Form",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Introduction",
+      "content": "Welcome to the induction form for Google. Please fill out the following information so that we can get to know you better."
+    },
+    {
+      "type": "staff",
+      "staff": {
+        "$for": {
+          "collection": "staffList",
+          "produce": {
+            "name": "{{name}}",
+            "email": "{{username}}@google.com"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "--- Test 1 ---": {
+    "areas": [
+      {
+        "name": "Lobby",
+        "description": "The lobby of the building."
+      },
+      {
+        "name": "Kitchen",
+        "description": "The kitchen of the building."
+      }
+    ]
+  },
+  "--- Test 2 ---": {
+    "areas": [
+      {
+        "name": "Lobby",
+        "description": "The lobby of the building."
+      },
+      {
+        "name": "Kitchen",
+        "description": "The kitchen of the building."
+      }
+    ]
+  },
+  "--- Test 3 ---": {
+    "name": "Induction Form",
+    "sections": [
+      {
+        "type": "text",
+        "title": "Introduction",
+        "content": "Welcome to the induction form for Google. Please fill out the following information so that we can get to know you better."
+      },
+      {
+        "type": "staff",
+        "staff": [
+          {
+            "name": "John Doe",
+            "email": "john.doe@google.com"
+          },
+          {
+            "name": "Jane Doe2",
+            "email": "jane.doe2@google.com"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "title": "Welcome to {{siteName}}",
+  "text": "We will be working here from {{siteStartDate}} to {{siteEndDate}}."
+}

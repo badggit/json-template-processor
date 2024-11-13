@@ -1,0 +1,55 @@
+{
+  "--- Variables ---": {
+    "companyName": "TechCorp",
+    "depts": [
+      {
+        "name": "Engineering",
+        "manager": "Alice",
+        "hasEmployees": true,
+        "employees": [
+          {
+            "name": "Bob",
+            "position": "Developer",
+            "fullTime": true
+          },
+          {
+            "name": "Charlie",
+            "position": "Designer",
+            "fullTime": false
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "manager": "David",
+        "hasEmployees": false
+      }
+    ]
+  },
+  "--- Output ---": {
+    "company": "TechCorp",
+    "departments": [
+      {
+        "name": "Engineering",
+        "manager": "Alice",
+        "employees": [
+          {
+            "name": "Bob",
+            "position": "Developer",
+            "isFullTime": {
+              "value": true
+            }
+          },
+          {
+            "name": "Charlie",
+            "position": "Designer"
+          }
+        ]
+      },
+      {
+        "name": "Marketing",
+        "manager": "David"
+      }
+    ]
+  }
+}

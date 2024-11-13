@@ -1,0 +1,23 @@
+{
+  "name": "Induction Form",
+  "sections": [
+    {
+      "type": "text",
+      "title": "Introduction",
+      "content": "Welcome to the induction form for Google. Please fill out the following information so that we can get to know you better."
+    },
+    {
+      "type": "staff",
+      "staff": [
+        {
+          "name": "John Doe",
+          "email": "john.doe@google.com"
+        },
+        {
+          "name": "Jane Doe",
+          "email": "jane.doe@google.com"
+        }
+      ]
+    }
+  ]
+}

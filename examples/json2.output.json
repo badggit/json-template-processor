@@ -1,0 +1,12 @@
+{
+  "areas": [
+    {
+      "name": "Lobby",
+      "description": "The lobby of the building."
+    },
+    {
+      "name": "Kitchen",
+      "description": "The kitchen of the building."
+    }
+  ]
+}

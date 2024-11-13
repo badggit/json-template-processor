@@ -1,0 +1,12 @@
+coverage
+dist
+node_modules
+.cache
+.next
+.vercel
+.vscode
+prisma
+
+package-lock.json
+storybook-static
+
